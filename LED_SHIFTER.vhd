@@ -1,0 +1,67 @@
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY LED_SHIFTER IS
+    PORT(
+			SEL:IN STD_LOGIC;
+			INDX :IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+         LED :OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+	END LED_SHIFTER;
+
+ARCHITECTURE BEHAVIORAL OF LED_SHIFTER IS
+
+BEGIN
+
+PROCESS (INDX)
+BEGIN
+IF(SEL='1')THEN
+   CASE INDX IS
+      WHEN "0000" => LED <= "00000000";
+      WHEN "0001" => LED <= "00000001";
+      WHEN "0010" => LED <= "00000010";
+      WHEN "0011" => LED <= "00000100";
+      WHEN "0100" => LED <= "00001000";
+      WHEN "0101" => LED <= "00010000";
+      WHEN "0110" => LED <= "00100000";
+      WHEN "0111" => LED <= "01000000";
+      WHEN "1000" => LED <= "10000000";
+      WHEN "1001" => LED <= "01000000";
+      WHEN "1010" => LED <= "00100000";
+      WHEN "1011" => LED <= "00010000";
+      WHEN "1100" => LED <= "00001000";
+      WHEN "1101" => LED <= "00000100";
+      WHEN "1110" => LED <= "00000010";
+      WHEN "1111" => LED <= "00000001";
+      WHEN OTHERS => LED <= "00000000";
+   END CASE;
+	ELSIF(SEL='0')THEN
+	   CASE INDX IS
+      WHEN "0000" => LED <= "00011000";
+      WHEN "0001" => LED <= "00100100";
+      WHEN "0010" => LED <= "01000010";
+      WHEN "0011" => LED <= "10000001";
+      WHEN "0100" => LED <= "10000001";
+      WHEN "0101" => LED <= "01000010";
+      WHEN "0110" => LED <= "00100100";
+      WHEN "0111" => LED <= "00011000";
+      WHEN "1000" => LED <= "00100100";
+      WHEN "1001" => LED <= "01000010";
+      WHEN "1010" => LED <= "10000001";
+      WHEN "1011" => LED <= "00000000";
+      WHEN "1100" => LED <= "10101010";
+      WHEN "1101" => LED <= "01010101";
+      WHEN "1110" => LED <= "10101010";
+      WHEN "1111" => LED <= "01010101";
+      WHEN OTHERS => LED <= "10101010";
+   END CASE;
+END IF;
+	
+	
+	
+END PROCESS;
+
+	
+				
+END BEHAVIORAL;
+
