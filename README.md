@@ -1,5 +1,6 @@
-![alt text](https://github.com/fpgatechsolution/MINI_SP6_FPGA/blob/master/img/IMG1.jpg)
-![alt text](https://github.com/fpgatechsolution/MINI_SP6_FPGA/blob/master/img/IMG2.jpg)
+![alt text](https://github.com/fpgatechsolution/MINI_SP6_FPGA/blob/master/img/img1.jpg)
+![alt text](https://github.com/fpgatechsolution/MINI_SP6_FPGA/blob/master/img/img2.jpg)
+	  
 
 # mini_sp6.bit file is test bit file 
 
