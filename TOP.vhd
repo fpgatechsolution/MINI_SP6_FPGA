@@ -99,7 +99,7 @@ INST_dcm_wrapper: dcm_wrapper PORT MAP(
 			END IF;
 	END PROCESS;
 	
-	CLK_1S<=COUNT(22);
+	CLK_1S<=COUNT(12);
 	
 	PROCESS (CLK_1S) 
 		BEGIN
